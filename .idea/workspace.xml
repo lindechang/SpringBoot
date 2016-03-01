@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b107009-664b-4afa-9aba-350b276c7c5a" name="Default" comment="">
+    <list default="true" id="4b107009-664b-4afa-9aba-350b276c7c5a" name="Default" comment="test commit">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SpringBoot.iws" />
@@ -60,6 +60,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/docs/笔记.md" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
       </list>
     </option>
   </component>
@@ -592,7 +593,7 @@
       <option name="number" value="Default" />
       <updated>1456797116869</updated>
       <workItem from="1456797120568" duration="4721000" />
-      <workItem from="1456829783543" duration="742000" />
+      <workItem from="1456829783543" duration="869000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <created>1456829845511</created>
@@ -610,7 +611,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5463000" />
+    <option name="totallyTimeSpent" value="5590000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
