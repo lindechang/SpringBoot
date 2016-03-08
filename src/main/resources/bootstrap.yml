@@ -1,0 +1,8 @@
+#spring:
+#  application:
+#    name: webtest
+#  cloud:
+#    zookeeper:
+#      config:
+#        cacheEnabled: true
+#      connect-string: ${ZOOKEEPER1_HOST:127.0.0.1}:${ZOOKEEPER1_PORT:2181}
