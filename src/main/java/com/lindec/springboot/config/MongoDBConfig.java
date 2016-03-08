@@ -21,6 +21,19 @@ public class MongoDBConfig extends AbstractMongoConfiguration {
     @Autowired
     private Environment env;
 
+//    @Override
+//    public String getDatabaseName() {
+//        return "webtest-service";
+//    }
+//
+//    @Override
+//    public Mongo mongo() throws Exception {
+//        return new MongoClient(singletonList(new ServerAddress("127.0.0.1",
+//                27017)),
+//                singletonList(MongoCredential.createCredential("lindec",
+//                       "webtest-service",
+//                        "123456".toCharArray())));
+//    }
     @Override
     public String getDatabaseName() {
         return env.getProperty("mongo.database");
