@@ -18,17 +18,23 @@
         a. 进入bin文件夹，按住"shift"键右击文件夹空白处，运行命令行，运行"zkServer.cmd"，
         b. 重复上面动作，运行"zkCli.cmd",
         c. 在"zkCli.cmd"命令行中将config压缩包（QQ群文件共享中有）所有的数据复制进去。
-            配置服务节点
-            create /config ""
-            create /config/application ""
-            配置具体mongodb参数(对mongodb参数必须预先配置好)：
-            create /config/webtest ""
-            create /config/webtest/mongo ""
-            create /config/webtest/mongo/address 127.0.0.1
-            create /config/webtest/mongo/port 27017
-            create /config/webtest/mongo/database mydb
-            create /config/webtest/mongo/username lindec
-            create /config/webtest/mongo/password 123456
+                配置服务节点
+                create /config ""
+                create /config/application ""
+                配置具体mongodb参数(对mongodb参数必须预先配置好)：
+                create /config/webtest ""
+                create /config/webtest/mongo ""
+                create /config/webtest/mongo/address 127.0.0.1
+                create /config/webtest/mongo/port 27017
+                create /config/webtest/mongo/database mydb
+                create /config/webtest/mongo/username lindec
+                create /config/webtest/mongo/password 123456
+        d. 查询配置是否成功，如：可以在"zkCli.cmd"中get /config/webtest/mongo/username 回车返回：lindec
+           也可以在工作里用
+           @Autowired
+           private Environment env
+           String name = env.getProperty("mongo.username")
+
     2) 其他环境
         a. 直接运行zkServer.sh，再运行zkCli.sh，将config压缩包中所有的数据输入到zkCli.sh中。
 
