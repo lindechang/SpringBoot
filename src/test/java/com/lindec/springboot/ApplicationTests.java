@@ -3,6 +3,7 @@ package com.lindec.springboot;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.lindec.springboot.repository.Person;
 import com.lindec.springboot.repository.PersonRepository;
 import com.lindec.springboot.utils.HttpTool;
 import org.junit.Test;
@@ -27,13 +28,16 @@ public class ApplicationTests {
 
     @Test
     public void contextLoads() {
+        Person person = personRepository.findByName("lindec");
 //		Person person = new Person();
-//		person.setAge(156);
-//		person.setName("lindec");
-//		personRepository.save(person);
+        person.setAge(255);
+        person.setAddress("rgreg");
+        person.setName("lindec");
+//        personRepository.deleteAll();
+        personRepository.save(person);
 
-        System.out.println("------------------------------------");
-        System.out.println("--------" + env.getProperty("app.tcpPort"));
+//        System.out.println("------------------------------------");
+//        System.out.println("--------" + env.getProperty("app.tcpPort"));
 
     }
 

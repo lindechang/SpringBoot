@@ -12,6 +12,7 @@ public class Person {
     @Id
     private ObjectId id;
     private String name;
+    private String address;
     private int age;
 
     public ObjectId getId() {
@@ -28,6 +29,14 @@ public class Person {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public int getAge() {

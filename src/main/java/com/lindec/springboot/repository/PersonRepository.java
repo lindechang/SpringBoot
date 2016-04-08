@@ -7,4 +7,5 @@ import org.springframework.data.mongodb.repository.MongoRepository;
  * Created by lindec on 2016/3/9.
  */
 public interface PersonRepository extends MongoRepository<Person, ObjectId> {
+    Person findByName(String name);
 }
