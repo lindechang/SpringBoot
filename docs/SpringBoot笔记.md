@@ -15,3 +15,5 @@ http://jinnianshilongnian.iteye.com/blog/1733708
 Security
 资料：
 http://haohaoxuexi.iteye.com/category/182468
+
+ @Scheduled(cron="...") ，用一个表达式来设置定时任务。
