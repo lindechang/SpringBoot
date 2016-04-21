@@ -6,7 +6,7 @@ package com.lindec.springboot.dto;
 public class Information {
     private String username;
     private String password;
-    private String age;
+    private int age;
 
     public String getUsername() {
         return username;
@@ -24,11 +24,11 @@ public class Information {
         this.password = password;
     }
 
-    public String getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(int age) {
         this.age = age;
     }
 }
