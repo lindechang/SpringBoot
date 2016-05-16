@@ -1,9 +1,12 @@
 package com.lindec.springboot.config;
 
+import com.lindec.springboot.exception.ErrorResponseFactory;
 import org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration;
 import org.springframework.boot.context.embedded.FilterRegistrationBean;
+import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.core.Ordered;
 import org.springframework.http.HttpMethod;
 import org.springframework.web.cors.CorsConfiguration;
@@ -17,6 +20,22 @@ import java.util.Arrays;
  */
 @Configuration
 public class SpringBootConfig extends WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter {
+
+    @Bean
+    public MessageSource messageSource() {
+        ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
+        messageSource.setBasename("classpath:messages/message");
+        messageSource.setUseCodeAsDefaultMessage(true);
+        messageSource.setDefaultEncoding("UTF-8");
+        messageSource.setCacheSeconds(0);
+        return messageSource;
+    }
+
+
+    @Bean
+    public ErrorResponseFactory genericResponseFactory() {
+        return new ErrorResponseFactory(messageSource());
+    }
 
     /**
      * 允许跨域访问

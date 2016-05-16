@@ -25,19 +25,19 @@ public class WebTest {
     @ResponseBody
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String login(@RequestBody Information information) {
-        System.out.println("---information---:" + information.getUsername());
+//        System.out.println("---information---:" + information.getUsername());
         int ii = information.getAge();
-        try {
-            if (ii > 25) {
-                throw new testException("ii > 25");
+        //try {
+        if (ii > 25) {
+            throw new testException("ii > 25");
 
-            } else {
-                System.out.println("------age--------:" + information.getAge());
-            }
-        } catch (Exception e) {
-            System.out.println("--------safsa-----------");
-            e.printStackTrace();
+        } else {
+            System.out.println("------age--------:" + information.getAge());
         }
+//        } catch (Exception e) {
+//            System.out.println("--------safsa-----------");
+//            e.printStackTrace();
+//        }
 
         System.out.println("------Test--------");
         return "ok";
