@@ -23,7 +23,7 @@
         b. 再另启一个命令窗口，输入mongo回车进入配置
         c. use admin 切换到管理员数据库
         d. db.createUser({user: "lindec",pwd: "0123",roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]})
-        e. db.auth("lindec"，"0123") 可以认证下返回1，则说明创建成功
+        e. db.auth("lindec","0123") 可以认证下返回1，则说明创建成功
         Ctrl+C退出
     2.配置数据库权限
         a. mongo -u lindec -p --authenticationDatabase admin 回车提示输入密码，键入密码：0123
